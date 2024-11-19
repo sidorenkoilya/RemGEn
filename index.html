@@ -8,7 +8,8 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #1e1e1e;
+            background: url('1.webp') no-repeat center center fixed;
+            background-size: cover;
             color: #f0f0f0;
         }
 
@@ -23,7 +24,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.8);
             border-radius: 20px;
             flex-wrap: wrap;
         }
@@ -31,24 +32,33 @@
         header .title, footer .title {
             font-size: 24px;
             font-weight: bold;
+            text-align: center;
+            width: 100%;
         }
 
         .icons {
             display: flex;
             gap: 15px;
+            justify-content: center;
+            margin-top: 10px;
         }
 
         .icons a {
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #555;
+            background-color: rgba(85, 85, 85, 0.8);
             border-radius: 50%;
             color: #f0f0f0;
             text-decoration: none;
             transition: transform 0.3s;
+        }
+
+        .icons img {
+            width: 32px;
+            height: 32px;
         }
 
         .icons a:hover {
@@ -58,6 +68,13 @@
         .main {
             text-align: center;
             padding: 40px 20px;
+        }
+
+        .main-content {
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 30px;
+            border-radius: 20px;
+            display: inline-block;
         }
 
         .main h1 {
@@ -74,7 +91,7 @@
             display: inline-block;
             padding: 15px 30px;
             font-size: 18px;
-            background-color: #444;
+            background-color: rgba(68, 68, 68, 0.8);
             border: none;
             border-radius: 20px;
             color: #f0f0f0;
@@ -93,7 +110,7 @@
         }
 
         form {
-            background-color: #2a2a2a;
+            background-color: rgba(51, 51, 51, 0.8);
             padding: 20px;
             border-radius: 20px;
             width: calc(100% - 40px);
@@ -111,14 +128,14 @@
         }
 
         form button {
-            background-color: #444;
+            background-color: rgba(68, 68, 68, 0.8);
             color: #f0f0f0;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
         form button:hover {
-            background-color: #555;
+            background-color: rgba(85, 85, 85, 0.8);
         }
 
         .info-blocks {
@@ -132,7 +149,7 @@
         .info-block {
             flex: 1;
             min-width: 250px;
-            background-color: #2a2a2a;
+            background-color: rgba(51, 51, 51, 0.8);
             padding: 20px;
             border-radius: 20px;
             text-align: center;
@@ -141,14 +158,14 @@
         }
 
         .info-block:hover {
-            background-color: #444;
+            background-color: rgba(68, 68, 68, 0.8);
             transform: scale(1.05);
         }
 
         @media (max-width: 768px) {
             header, footer {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
                 gap: 10px;
             }
 
@@ -186,14 +203,18 @@
     <header>
         <div class="title">Ремонт генераторів</div>
         <div class="icons">
-            <a href="https://t.me/RemGenBot" target="_blank">T</a>
+            <a href="https://t.me/RemGenBot" target="_blank"><img src="tg.svg" alt="Telegram"></a>
+            <a href="#"><img src="viber.svg" alt="Viber"></a>
+            <a href="tel:+380638122604"><img src="call.png" alt="Call"></a>
         </div>
     </header>
 
     <main class="main container">
-        <h1>Професійний ремонт генераторів</h1>
-        <p>Більше 5 років на ринку. Виїзд на діагностику – 500 грн. Ціна ремонту залежить від результатів діагностики.</p>
-        <button class="btn" onclick="toggleForm()">Викликати майстра</button>
+        <div class="main-content">
+            <h1>Професійний ремонт генераторів</h1>
+            <p>Більше 5 років на ринку. Виїзд на діагностику – 500 грн. Ціна ремонту залежить від результатів діагностики.</p>
+            <button class="btn" onclick="toggleForm()">Викликати майстра</button>
+        </div>
     </main>
 
     <div class="form-container">
@@ -215,7 +236,9 @@
     <footer>
         <div class="title">Ремонт генераторів</div>
         <div class="icons">
-            <a href="https://t.me/RemGenBot" target="_blank">T</a>
+            <a href="https://t.me/RemGenBot" target="_blank"><img src="tg.svg" alt="Telegram"></a>
+            <a href="#"><img src="viber.svg" alt="Viber"></a>
+            <a href="tel:+380638122604"><img src="call.png" alt="Call"></a>
         </div>
     </footer>
 
